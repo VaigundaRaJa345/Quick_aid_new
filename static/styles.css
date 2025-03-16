@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0f19;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #4ea8de;
+}
+
+/* Form Styling */
+form {
+    background-color: #1a1f2a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input, select {
+    background-color: #2a3140;
+    color: #ffffff;
+    border: 1px solid #4ea8de;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #64b6f7;
+}
+
+button {
+    background-color: #4ea8de;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #64b6f7;
+}
+
+/* Dashboard */
+.dashboard-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1f2a;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #4ea8de;
+}
+
+th {
+    background-color: #2a3140;
+    color: #4ea8de;
+}
+
+td {
+    color: #ffffff;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #222836;
+}
+
+tbody tr:hover {
+    background-color: #2a374b;
+}
+
+/* Aztec Code Image */
+td img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #4ea8de;
+}
+
+/* UID Copy Styling */
+.uid {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #64b6f7;
+}
+
+.uid:hover {
+    text-decoration: underline;
+}
+
+/* Actions Links */
+td a {
+    color: #4ea8de;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #ff4c4c;
+}
+
+.logout-btn:hover {
+    background-color: #ff6666;
+}
+
+/* View Details Page */
+.detail-box {
+    background-color: #1a1f2a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.detail-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.detail-box strong {
+    color: #64b6f7;
+}
+
+.detail-box img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #4ea8de;
+}
+
+/* Back Button */
+.back-button {
+    background-color: #4ea8de;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.back-button:hover {
+    background-color: #64b6f7;
+}

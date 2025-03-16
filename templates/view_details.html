@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}View Details | QUICK AID{% endblock %}
+
+{% block content %}
+    <h2>Emergency Details</h2>
+
+    {% if details %}
+        <div class="detail-box">
+            <p><strong>Full Name:</strong> {{ details.name }}</p>
+            <p><strong>Emergency Contact:</strong> {{ details.emergency_contact }}</p>
+            <p><strong>Vehicle Number:</strong> {{ details.vehicle_number }}</p>
+            <p><strong>Blood Group:</strong> {{ details.blood_group if details.blood_group else 'N/A' }}</p>
+            <p><strong>Allergies:</strong> {{ details.allergies if details.allergies != 'No' else 'None' }}</p>
+            <p><strong>Disability:</strong> {{ details.differently_abled if details.differently_abled != 'No' else 'None' }}</p>
+            <p><strong>Alternate Contact:</strong> {{ details.alternate_contact if details.alternate_contact else 'N/A' }}</p>
+            <p><strong>Unique ID (UID):</strong> {{ details.uid }}</p>
+
+            {% if details.aztec_code_path %}
+                <p><strong>Aztec Code:</strong></p>
+                <img src="{{ details.aztec_code_path }}" alt="Aztec Code">
+            {% else %}
+                <p><strong>Aztec Code:</strong> Not generated yet.</p>
+            {% endif %}
+        </div>
+    {% else %}
+        <p>No details found for this UID.</p>
+    {% endif %}
+
+    <button onclick="window.location.href='{{ url_for('dashboard') }}';">Back to Dashboard</button>
+{% endblock %}

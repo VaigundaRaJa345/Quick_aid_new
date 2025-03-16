@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Add Emergency Details | QUICK AID{% endblock %}
+
+{% block content %}
+    <h1>Add Emergency Details</h1>
+
+    <form action="{{ url_for('add_details') }}" method="POST" class="details-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="emergency_contact">Emergency Contact Number:</label>
+        <input type="text" id="emergency_contact" name="emergency_contact" required>
+
+        <label for="vehicle_number">Vehicle Number:</label>
+        <input type="text" id="vehicle_number" name="vehicle_number" required>
+
+        <label for="blood_group">Blood Group (Optional):</label>
+        <input type="text" id="blood_group" name="blood_group">
+
+        <label for="allergies_select">Do you have allergies?</label>
+        <select id="allergies_select" name="allergies">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+        <input type="text" id="allergies_input" name="allergy_type" placeholder="Specify allergies" style="display: none;">
+
+        <label for="disabled_select">Are you differently-abled?</label>
+        <select id="disabled_select" name="differently_abled">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+        <input type="text" id="disabled_input" name="disability_type" placeholder="Specify condition" style="display: none;">
+
+        <label for="alternate_contact">Alternate Emergency Contact (Optional):</label>
+        <input type="text" id="alternate_contact" name="alternate_contact">
+
+        <button type="submit" class="save-button">Save Details</button>
+        <a href="{{ url_for('dashboard') }}" class="cancel-button">Cancel</a>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
